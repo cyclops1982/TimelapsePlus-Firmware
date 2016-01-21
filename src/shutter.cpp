@@ -725,7 +725,15 @@ char shutter::task()
         photos = 0;
         exps = 0;
 
-        current.infinitePhotos = (current.Mode & RAMP) ? (current.IntervalMode == INTERVAL_MODE_EXTERNAL) : (current.Photos == 0 ? 1 : 0);
+        if (current.Mode & RAMP) {
+            current.infinitePhotos = current.IntervalMode == INTERVAL_MODE_EXTERNAL;
+        } else {
+            if (current.Photos == 0) {
+                current.infinitePhotos = 1;
+            } else {
+                current.infinitePhotos = 0;
+            }
+        }
         status.infinitePhotos_u8 = current.infinitePhotos;
         status.photosRemaining_u16 = current.Photos;
         status.photosTaken_u16 = 0;
