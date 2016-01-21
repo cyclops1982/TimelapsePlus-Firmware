@@ -1,11 +1,9 @@
-# screenshot.rb
-# Grabs screenshots from the Timelapse+
+# usb.rb
+# Show the version of the timelapse+
 #
 # Usage:
 #
-# ruby ./screenshot.rb "<name>"
-#
-# It will then create the screenshot <name>.png in the same folder
+# ruby ./usb.rb
 #
 # By Elijah Parker
 # mail@timelapseplus.com

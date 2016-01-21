@@ -1,9 +1,9 @@
-# capture.rb
-# Tells the Timelapse+ to have the camera take a picture
+# dfu.rb
+# Tells the Timelapse+ to go into DFU mode
 #
 # Usage:
 #
-# ruby ./capture.rb
+# ruby ./dfu.rb
 #
 #
 # By Elijah Parker
