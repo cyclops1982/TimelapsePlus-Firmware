@@ -620,7 +620,11 @@ char shutter::task()
 
         usingUSB = camera.ready;
 
-        if(conf.camera.interface == INTERFACE_AUTO && usingUSB && camera.supports.bulb) usbPrimary = 1; else usbPrimary = 0;
+        if(conf.camera.interface == INTERFACE_AUTO && usingUSB && camera.supports.bulb) {
+            usbPrimary = 1; 
+        } else {
+            usbPrimary = 0;
+        }
 
         ////////////////////////////// pre check ////////////////////////////////////
         CHECK_ALERT(STR_NOCAMERA_ALERT, conf.camera.interface != INTERFACE_IR && !camera.supports.capture && !cableIsConnected());
