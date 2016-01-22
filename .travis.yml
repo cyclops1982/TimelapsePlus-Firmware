@@ -3,9 +3,9 @@ before_install:
   - brew update
   - brew tap larsimmisch/avr
   - brew install avr-binutils
- # - brew install gmp
-  - brew install libmpc
-#  - brew install mpfr
+# - brew install gmp
+# - brew install libmpc
+# - brew install mpfr
   - ruby .wrap.rb brew install avr-gcc
   - brew install avr-libc
   - brew install dfu-programmer
