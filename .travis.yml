@@ -1,13 +1,6 @@
-language: objective-c
+language: c
 before_install:
-  - brew update
-  - brew tap larsimmisch/avr
-  - brew install avr-binutils
-# - brew install gmp
-# - brew install libmpc
-# - brew install mpfr
-  - ruby .wrap.rb brew install avr-gcc
-  - brew install avr-libc
-  - brew install dfu-programmer
-#  - brew install libusb
+  - sudo apt-get update -qq
+install:
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
 script: make
